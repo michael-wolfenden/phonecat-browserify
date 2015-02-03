@@ -6,7 +6,11 @@ module.exports =
         var vm = this;
         vm.orderProp = 'age';
 
-        $http.get('phones/phones.json').success(function (data) {
-            vm.phones = data;
-        });
+        _activate();
+
+        function _activate() {
+            $http.get('phones/phones.json').success(function (data) {
+                vm.phones = data;
+            });
+        }
     };
