@@ -18,6 +18,7 @@
                 <li ng-repeat="phone in vm.phones | filter:vm.query | orderBy:vm.orderProp" class="thumbnail">
                     <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
                     <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+
                     <p>{{phone.snippet}}</p>
                 </li>
             </ul>

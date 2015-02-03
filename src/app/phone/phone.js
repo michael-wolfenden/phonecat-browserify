@@ -2,7 +2,10 @@
 
 module.exports =
     /*@ngInject*/
-    function Phone($routeParams) {
+    function Phone($routeParams, $http) {
         var vm = this;
-        vm.phoneId = $routeParams.phoneId;
+
+        $http.get('phones/' + $routeParams.phoneId + '.json').success(function(data) {
+            vm.phone = data;
+        });
     };
