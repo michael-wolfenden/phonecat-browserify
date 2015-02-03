@@ -1,9 +1,9 @@
 'use strict';
 
-var gulp    = require('gulp');
-var jshint  = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var config  = require('../../configuration').lint;
+var gulp    = require('gulp'),
+    jshint  = require('gulp-jshint'),
+    stylish = require('jshint-stylish'),
+    config  = require('../../configuration').lint;
 
 gulp.task('_lint', function () {
     return gulp.src(config.sourceFiles)

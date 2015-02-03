@@ -1,11 +1,11 @@
 'use strict';
 
-var gulp         = require('gulp');
-var less         = require('gulp-less');
-var sourcemaps   = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var gutil        = require('gulp-util');
-var config       = require('../../configuration').css;
+var gulp         = require('gulp'),
+    less         = require('gulp-less'),
+    sourcemaps   = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer'),
+    gutil        = require('gulp-util'),
+    config       = require('../../configuration').css;
 
 module.exports = gulp.task('_css', function () {
     return gulp.src(config.sourceFile)

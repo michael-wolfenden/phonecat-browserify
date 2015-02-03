@@ -1,8 +1,8 @@
 'use strict';
 
-var gulp     = require('gulp');
-var imagemin = require('gulp-imagemin');
-var config   = require('../../configuration').images;
+var gulp     = require('gulp'),
+    imagemin = require('gulp-imagemin'),
+    config   = require('../../configuration').images;
 
 module.exports = gulp.task('_images', function () {
     return gulp.src(config.sourceFiles)
