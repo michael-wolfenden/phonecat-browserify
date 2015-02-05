@@ -1,12 +1,12 @@
 'use strict';
 
 require('angular');
-require('angular-route');
 
 module.exports = angular
     .module('app.core', [
-        'ngRoute',
+        require('../infastructure/router/router.module').name,
 
-        require('../blocks/router/router.module').name
+        require('./filters/filters.module').name,
+        require('./services/services.module').name
     ])
     .config(require('./config.route.js'));

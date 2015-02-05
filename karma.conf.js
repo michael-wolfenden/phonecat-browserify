@@ -13,7 +13,11 @@ module.exports = function (config) {
 
 
         // list of files / patterns to load in the browser
-        files: ['src/app/**/*.specs.js'],
+        files: [
+            'node_modules/chai-angular/chai-angular.js',
+
+            'src/app/**/*.specs.js'
+        ],
 
 
         // list of files to exclude

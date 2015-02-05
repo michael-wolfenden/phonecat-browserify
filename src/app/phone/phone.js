@@ -2,16 +2,15 @@
 
 module.exports =
     /*@ngInject*/
-    function Phone($routeParams, $http) {
+    function Phone($routeParams, dataContext) {
         var vm = this;
         vm.setImage = setImage;
 
         _activate();
 
         function _activate() {
-            $http.get('phones/' + $routeParams.phoneId + '.json').success(function (data) {
-                vm.phone = data;
-                vm.mainImageUrl = data.images[0];
+            vm.phone = dataContext.get({phoneId: $routeParams.phoneId}, function (phone) {
+                vm.mainImageUrl = phone.images[0];
             });
         }
 

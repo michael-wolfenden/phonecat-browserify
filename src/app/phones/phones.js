@@ -2,15 +2,8 @@
 
 module.exports =
     /*@ngInject*/
-    function Phones($http) {
+    function Phones(dataContext) {
         var vm = this;
         vm.orderProp = 'age';
-
-        _activate();
-
-        function _activate() {
-            $http.get('phones/phones.json').success(function (data) {
-                vm.phones = data;
-            });
-        }
+        vm.phones = dataContext.query();
     };
