@@ -14,7 +14,7 @@ describe('checkmark', function () {
 
     //////////////////////////////////////////////////////////////////////////////
 
-    describe("the checkmark filter", function () {
+    describe('the checkmark filter', function () {
 
         it('should convert true values to unicode checkmark', function () {
             expect(checkmarkFilter(true)).to.equal('\u2713');

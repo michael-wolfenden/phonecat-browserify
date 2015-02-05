@@ -2,7 +2,10 @@ var sourcePath = './src';
 var destinationPath = './dest';
 
 var thirdPatyVendorsToBundleSeperately = [
+    'jquery',
     'angular',
+    'angular-animate',
+    'angular-resource',
     'angular-route'
 ];
 

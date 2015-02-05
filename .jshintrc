@@ -78,6 +78,7 @@
 	"globals"   : {
         "angular" : false,
         "beforeEach": false,
+        "afterEach": false,
         "inject": false,
         "expect": false,
         "it": false,
