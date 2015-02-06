@@ -1,6 +1,5 @@
 var sourcePath = './src';
 var destinationPath = './dest';
-
 var thirdPatyVendorsToBundleSeperately = [
     'jquery',
     'angular',
@@ -45,7 +44,6 @@ module.exports = {
             destinationPath: destinationPath + '/js',
             requires: [],
             externals: thirdPatyVendorsToBundleSeperately,
-            transforms: ['browserify-ngannotate', 'brfs'],
             sourcemaps: true,
             watch: true
         }, {
@@ -54,7 +52,6 @@ module.exports = {
             destinationPath: destinationPath + '/js',
             requires: thirdPatyVendorsToBundleSeperately,
             externals: [],
-            transforms: [],
             sourcemaps: false,
             watch: false
         }]
@@ -76,6 +73,11 @@ module.exports = {
 
     index: {
         sourceFile: sourcePath + '/index.html',
+        regexOfReferencesToReplace: /(app|vendor)\.(css|js)/g,
         destinationPath: destinationPath
+    },
+
+    test: {
+        karmaFile: 'karma.conf.js'
     }
 };

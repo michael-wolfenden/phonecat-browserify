@@ -6,14 +6,13 @@ module.exports = function () {
     return {
         addClass: animateUp,
         removeClass: animateDown
-    }
+    };
 };
 
 function animateUp(element, className, done) {
     if (className !== 'active') {
         return;
     }
-    console.log('animateUp');
 
     element.css({
         position: 'absolute',
@@ -37,7 +36,6 @@ function animateDown(element, className, done) {
     if (className !== 'active') {
         return;
     }
-    console.log('animateDown');
 
     element.css({
         position: 'absolute',
